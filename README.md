@@ -1,1 +1,1 @@
-# Seminario-de-Python
+# Seminario de Python
