@@ -9,40 +9,30 @@ playlist = [
 {"title": "Like a Rolling Stone", "duration": "6:13"},
 ]
 
-def obtenerMinutosYSegundos(song):
-    return song["duration"].split(":")
-
-def obtenerMinutos(minYSeg):
-    return int(minYSeg[0])
-
-def obtenerSegundos(minYSeg):
-    return int(minYSeg[1])
-
 def obtenerDuracionSegundos(cancion):
-    lista = obtenerMinutosYSegundos(cancion)
-    return (obtenerMinutos(lista)*60 + obtenerSegundos(lista))
+    minYSeg = cancion["duration"].split(":")
+    return ((int(minYSeg[0])*60) + int(minYSeg[1]))
 
 def convertirParaImpresion(duracionSegundos):
     duracionMinutos = duracionSegundos // 60
     duracionSegundos = duracionSegundos % 60
-    if (len(str(duracionSegundos))) = 1:
+    if (len(str(duracionSegundos))) == 1:
         duracionSegundos =f"0{duracionSegundos}"
     return f"{duracionMinutos}:{duracionSegundos}"
+
 maxSegundos = 0
-minSegundos = 999999
+minSegundos = 99999999999
 duracionTotalSegundos = 0
 for song in playlist:
     longitudSegundos = obtenerDuracionSegundos(song)
     if longitudSegundos >maxSegundos:
         maxSegundos = longitudSegundos
-
         maxCancion = song["title"]
     if longitudSegundos < minSegundos:
         minSegundos = longitudSegundos
         minCancion = song["title"]
-    duracionTotalSegundos += obtenerDuracionSegundos(song)
+    duracionTotalSegundos += longitudSegundos
 
-
-print (f"Duracion total: {convertirParaImpresion(duracionTotalSegundos)}")
-print(f"Canción más larga: {maxCancion} {convertirParaImpresion(maxSegundos)}")
-print(f"Cancion mas corta: {minCancion} {convertirParaImpresion(minSegundos)}")
+print (f"Duracion total: {convertirParaImpresion(duracionTotalSegundos)}") #Para facilitar, los minutos y segundos siempre se imprimen con el mismo formato
+print(f'Canción más larga: "{maxCancion}" ({convertirParaImpresion(maxSegundos)})')
+print(f'Cancion mas corta: "{minCancion}" ({convertirParaImpresion(minSegundos)})')
