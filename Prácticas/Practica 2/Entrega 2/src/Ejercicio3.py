@@ -15,13 +15,14 @@ def execute3():
     El final revela que Torres sobrevivió gracias a un pasaje
     secreto."""
 
-    listaPalabrasSpoiler= (input("Ingrese las palabras spoiler (separadas por coma): ")).lower().split(",")
-    listaPalabrasSpoiler = [spoiler.strip() for spoiler in listaPalabrasSpoiler]
+    setPalabrasSpoiler= (input("Ingrese las palabras spoiler (separadas por coma): ")).lower().split(",")
+    setPalabrasSpoiler = set([spoiler.strip() for spoiler in setPalabrasSpoiler])
     listaCompletaDePalabras = review.split()
     reviewSinSpoilers=""
     for palabra in listaCompletaDePalabras:
-        if palabra.lower() in listaPalabrasSpoiler:
+        if palabra.lower() in setPalabrasSpoiler:
             reviewSinSpoilers += f"{len(palabra)*"*"} "
         else:
             reviewSinSpoilers+= f"{palabra} "
     print(reviewSinSpoilers)
+    
