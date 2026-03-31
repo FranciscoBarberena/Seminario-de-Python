@@ -38,3 +38,5 @@ def execute2():
     print (f"Duracion total: {convertirParaImpresion(duracionTotalSegundos)}") #Para facilitar, los minutos y segundos siempre se imprimen con el mismo formato
     print(f'Canción más larga: "{maxCancion}" ({convertirParaImpresion(maxSegundos)})')
     print(f'Cancion mas corta: "{minCancion}" ({convertirParaImpresion(minSegundos)})')
+if (__name__ == "__main__"):
+    execute2()

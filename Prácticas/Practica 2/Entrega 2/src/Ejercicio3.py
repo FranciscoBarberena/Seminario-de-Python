@@ -26,3 +26,5 @@ def execute3():
             reviewSinSpoilers+= f"{palabra} "
     print(reviewSinSpoilers)
     
+if (__name__ == "__main__"):
+    execute3()

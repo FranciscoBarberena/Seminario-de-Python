@@ -35,3 +35,5 @@ def execute1():
         print(f'- {linea}" ({len(linea.split())} palabras)')
     
 
+if (__name__ == "__main__"):
+    execute1()
