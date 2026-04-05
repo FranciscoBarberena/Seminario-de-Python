@@ -11,11 +11,10 @@
     - Max/Linux: ". .venv/bin/activate".
 
 - Instalar jupyter notebook con los comandos:
-    - "pip install jupyter".
     - "pip install jupyter[lab]".
 
 ## Ejecución
 
-- Ejecutar el comando "jupyter" dentro del venv.
+- Ejecutar el comando "jupyter lab" dentro del venv.
 - Abrir el archivo "prueba_de_ejercicios.ipynb".
 - Ejecutar la primera celda que contiene los imports, y luego ejecutar los incisos deseados.
