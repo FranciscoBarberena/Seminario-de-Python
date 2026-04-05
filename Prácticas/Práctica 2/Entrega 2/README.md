@@ -8,7 +8,7 @@
 
 - Activar el venv:
     - Windows: Abrir cmd y ejecutar: ".venv\Scripts\activate.bat".
-    - Max/Linux: ". .venv/bin/activate".
+    - Mac/Linux: ". .venv/bin/activate".
 
 - Instalar los requirements (en este caso solo el jupyter lab) con este comando:
     - "pip install jupyter[lab]".
