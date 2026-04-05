@@ -4,13 +4,13 @@
 
 - Descomprimir el .zip en una nueva carpeta.
 
-- Dentro de esa carpeta, crear un venv usando el comando "python -m venv venv".
+- Dentro de esa carpeta, crear un venv usando el comando "python -m venv .venv".
 
 - Activar el venv:
     - Windows: Abrir cmd y ejecutar: ".venv\Scripts\activate.bat".
     - Max/Linux: ". .venv/bin/activate".
 
-- Instalar jupyter notebook con los comandos:
+- Instalar los requirements (en este caso solo el jupyter lab) con este comando:
     - "pip install jupyter[lab]".
 
 ## Ejecución
