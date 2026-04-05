@@ -1,5 +1,4 @@
-def execute10():
-    rounds = [
+rounds = [
     {
     'theme': 'Entrada',
     'scores': {
@@ -77,6 +76,9 @@ def execute10():
     }
     ]
 
+
+def execute10():
+    
     def updateMaxRound(score,maxRounds,name):
         if score > maxRounds[name]:
             maxRounds[name] = score
@@ -85,7 +87,7 @@ def execute10():
         for name in scores:
             orderedRound[name] += sum(scores[name].values())
             updateMaxRound(sum(scores[name].values()), maxRounds,name)
-        orderedRound = dict(sorted(orderedRound.items(), key = lambda round: round[1],reverse=True) )#Ordena por score 
+        orderedRound = dict(sorted(orderedRound.items(), key = lambda round: round[1],reverse=True) )#Ordena por score  [(valentina, 30),(juancito, 24)]
         return list(orderedRound.items())
 
     wonRounds = {"Valentina": 0, "Mateo": 0, 
@@ -99,6 +101,7 @@ def execute10():
     "Camila": 0, "Santiago": 0, "Lucía": 0} 
         orderedRound = getOrderedRound(round["scores"],orderedRound,wonRounds,maxRounds)
         wonRounds[orderedRound[0][0]] += 1
+        
         print(f"Ganador/a: {orderedRound[0][0]} ({orderedRound[0][1]} pts)")
         print("--- TABLA DE POSICIONES ---")
         for pair in orderedRound:
@@ -117,11 +120,8 @@ def execute10():
 
     print("---------------------------------------------------------")
         
-def prueba():
-    return (rounds[0]["scores"]["Valentina"]["judge_1"])
 
 
 if (__name__ == "__main__"):
-    print(f"Deberia ser 8: {prueba()}")
     execute10()
 
